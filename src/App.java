@@ -8,6 +8,8 @@ public class App {
     Scanner sc = new Scanner (System.in);
     System.out.println("enter your name");
     String name = sc.nextLine();
-    System.out.println("hello "+name);
+    System.out.println("hello "+name)
+        //this code is not neded in the project
+        
     }
 }
