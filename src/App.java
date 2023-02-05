@@ -22,6 +22,7 @@ public class App extends Thread {
         Thread t2 = new App("Second Thread");
         t1.start();
         t2.start();
+        System.out.println("just trying blackbox to be refrences");
     }
 }
 
