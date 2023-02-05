@@ -39,9 +39,9 @@ public class MyThread extends Thread {
             PrintWriter writer = new PrintWriter(out, true);
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // arrays that contains login information to enter server
-            String ReceptionUserName[] = { "RakanSalama", "MoathAlSolami", "AbdulrahmanNahfawi" };                    //To enter the client, you only can by entering username/password
-            String ReceptionPassword[] = { "RakanS", "MoathS", "AbdulrahmanN" };                                 //First two arrays are for log in, and 3rd array is to inform who is loggeed in                                 
-            String ReceptionName[] = { "Rakan", "Moath", "Abdulrahman" };                                
+            String ReceptionUserName[] = { "AbdullahJustniah", "ZiyadAlshehri", "RedaSlama" };                    //To enter the client, you only can by entering username/password
+            String ReceptionPassword[] = { "AbdullahJ", "ziyadS", "redaS" };                                 //First two arrays are for log in, and 3rd array is to inform who is loggeed in                                 
+            String ReceptionName[] = { "abdullah", "ziyad", "reda" };                                
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             Boolean check = true; // For the while loop, If it change the loop will stop ( it will only change if the user did login)
             while (check) { // this loop is made because if the client didn't enter a correct username or password, it will ask him again and again.
