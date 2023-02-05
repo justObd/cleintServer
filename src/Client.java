@@ -21,6 +21,7 @@ public class Client {
             Scanner sc = new Scanner(System.in);                                 
             Scanner receiver = new Scanner(in);
             PrintWriter writer = new PrintWriter(out, true);
+            System.out.println("first part completed ");
             // -----------------------------------------------------------------------------------------------------------
             ArrayList<String> inp = new ArrayList<String>();
             inp.add("Enter username:");
@@ -31,6 +32,8 @@ public class Client {
             inp.add("Update visitor name");                    //it will stop receiving and it will send input to the server.
             inp.add("Enter check out date DD/MM: ");
             inp.add("ENTER ROOM NO: ");
+            System.out.println("second part completed");
+
             // -----------------------------------------------------------------------------------------------------------
             while (true) {
                 line = receiver.nextLine();
@@ -43,6 +46,7 @@ public class Client {
 
         } catch (ConnectException e) { // if the server was offline it will handel it
             System.out.println("Server is offline");
+            System.out.println("eceeption occured");
         }
     }
 }
