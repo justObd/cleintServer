@@ -33,6 +33,7 @@ public class Client {
             inp.add("Enter check out date DD/MM: ");
             inp.add("ENTER ROOM NO: ");
             System.out.println("second part completed");
+            System.out.println("  ");
 
             // -----------------------------------------------------------------------------------------------------------
             while (true) {
