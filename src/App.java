@@ -1,29 +1,29 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+//how to implement threads?
+public class App extends Thread {
+    private final String name;
 
-public class App {
-    /**
-     * @param args
-     * @throws Exception
-     */
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        System.out.println("hi my name is abdullah abdulrahim justaniah and i am senior in king abdulaziz university");
-        System.out.println("hi this is just practicing to pull and push project to this repositry");
-    Scanner sc = new Scanner (System.in);
-    System.out.println("enter your name");
-    String name = sc.nextLine();
-    System.out.println("hello "+name);
-        //this code is not neded in the project
-ArrayList a =new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            extracted(a, i);
-        }
-        
+    public App(String name) {
+        this.name = name;
     }
 
-    private static boolean extracted(ArrayList a, int i) {
-        return a.add(i);
+    public void run() {
+        try {
+            for (; ; ) {
+                System.out.println(name);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("sleep interrupted");
+        }
+    }
+
+    public static void main(String[] args) {
+        Thread t1 = new App("First Thread");
+        Thread t2 = new App("Second Thread");
+        t1.start();
+        t2.start();
     }
 }
+
+
+
