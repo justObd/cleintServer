@@ -47,7 +47,7 @@ public class Client {
 
         } catch (ConnectException e) { // if the server was offline it will handel it
             System.out.println("Server is offline");
-            System.out.println("eceeption occured");
+            System.out.println("eceeption occured o");
         }
     }
 }
