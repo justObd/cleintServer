@@ -10,7 +10,7 @@ import org.mariadb.jdbc.Connection;
 public class Server {
     public static void main(String[] args) throws IOException {
         try {
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mariadb://localhost:3306/rooms", "root","2037276"); // You must change the password and user
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mariadb://localhost:3306/client", "root","123"); // You must change the password and user
                 Statement stmt = con.createStatement();
                 ResultSet result = stmt.executeQuery("SELECT * FROM rooms;");
                 if (!result.next()) { // If the database is empty, it will insert these values. If the database was already implemented it will ignore it.             

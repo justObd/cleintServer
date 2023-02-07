@@ -39,8 +39,8 @@ public class MyThread extends Thread {
             PrintWriter writer = new PrintWriter(out, true);
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // arrays that contains login information to enter server
-            String ReceptionUserName[] = { "AbdullahJustniah", "ZiyadAlshehri", "RedaSlama" };                    //To enter the client, you only can by entering username/password
-            String ReceptionPassword[] = { "AbdullahJ", "ziyadS", "redaS" };                                 //First two arrays are for log in, and 3rd array is to inform who is loggeed in                                 
+            String ReceptionUserName[] = { "abdullah", "ziyad", "reda" };                    //To enter the client, you only can by entering username/password
+            String ReceptionPassword[] = { "abd", "ziy", "red" };                                 //First two arrays are for log in, and 3rd array is to inform who is loggeed in                                 
             String ReceptionName[] = { "abdullah", "ziyad", "reda" };                                
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             Boolean check = true; // For the while loop, If it change the loop will stop ( it will only change if the user did login)
@@ -108,20 +108,20 @@ public class MyThread extends Thread {
                         writer.println("========================================================================================");
                     }
                 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                    else if (choice.equals("2")) { //This choice will update Visitor name,check in,check out
+                    else if (choice.equals("2")) {
                         PreparedStatement pstmt = con.prepareStatement("UPDATE rooms SET Visitor_Name=?, In_Date =? , Out_Date = ? , State = 0 WHERE Room_No = ?"); 
 
-                        writer.println("Which room do you want to update?");//the room you want to update
+                        writer.println("Which room do you want to update?");
                         room_number = receiver.nextInt();
 
-                        writer.println("Update visitor name");//the visitor name
+                        writer.println("Update visitor name");
                         visitor_name = receiver.next();
 
-                        writer.println("Enter check in date DD/MM: ");//the date of check in
+                        writer.println("Enter check in date DD/MM: ");
                         check_in = receiver.next();
 
-                        writer.println("Enter check out date DD/MM: ");  //the date of check out                           
-                        check_out = receiver.next(); // and the state of the room will be 0 which means it's booked
+                        writer.println("Enter check out date DD/MM: ");                             //This choice will update Visitor name,check in,check out
+                        check_out = receiver.next();                                                  // and the state of the room will be 0 which means it's booked
     
                         pstmt.setString(1, visitor_name); 
                         pstmt.setString(2, check_in); 
