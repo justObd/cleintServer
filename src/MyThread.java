@@ -22,28 +22,30 @@ public class MyThread extends Thread {
     @Override
     public void run() {
         try {
-            String ScannerPassword;
-            String ScannerUsername;
-            String ReceptionistName;
-            String choice;
-            int room_number;
-            String room_type;
-            String visitor_name;
             String check_in;
             String check_out;
             int state;
-            // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            String choice;
+            int room_number;
+            String room_type;
+            String ScannerPassword;
+            String ScannerUsername;
+            String ReceptionistName;
+            String visitor_name;
+            
+            
             InputStream in = client.getInputStream();
             OutputStream out = client.getOutputStream();
             Scanner receiver = new Scanner(in);
             PrintWriter writer = new PrintWriter(out, true);
-            // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // arrays that contains login information to enter server
+          
+            // arrays that contains the name,user name,password for the employee
+            String ReceptionName[] = { "abdullah", "ziyad", "reda" };
             String ReceptionUserName[] = { "abdullah", "ziyad", "reda" };                    //To enter the client, you only can by entering username/password
             String ReceptionPassword[] = { "abd", "ziy", "red" };                                 //First two arrays are for log in, and 3rd array is to inform who is loggeed in                                 
-            String ReceptionName[] = { "abdullah", "ziyad", "reda" };                                
-            // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            Boolean check = true; // For the while loop, If it change the loop will stop ( it will only change if the user did login)
+                                            
+            
+            Boolean check = true; //the condtion to stop the loop
             while (check) { // this loop is made because if the client didn't enter a correct username or password, it will ask him again and again.
 
                 writer.println("Enter username:");
